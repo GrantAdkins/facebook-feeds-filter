@@ -52,6 +52,7 @@
                       obj.children.props.children.props;
                 if ( root ) {
                     const category = findNestedProperty(root, /feed/, o => o.category, 4);
+                    console.log(category);
                     if ( category ) {
                         processInsertedFeedUnit(node, category);
                     }
