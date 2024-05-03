@@ -1,6 +1,7 @@
 /// facebook-feeds-filter.js
 (function() {
-    const categoriesToHide = '{{1}}';  // Optional argument to filter posts by their category
+    // Possible categories to specify: engagement, engagement_qp, fb_shorts
+    const categoriesToHide = '{{1}}';  // Optional argument to filter posts by their category.
     const setOfCategoriesToHide = (( ) => {
         if ( categoriesToHide === '' || categoriesToHide === '{{1}}' ) { return new Set(); }
         return new Set(categoriesToHide.split(/\s*\|\s*/).map(s => s.toUpperCase()));
